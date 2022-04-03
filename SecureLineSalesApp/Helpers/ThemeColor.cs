@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SecureLineSalesApp.Helpers
 {
@@ -13,11 +9,11 @@ namespace SecureLineSalesApp.Helpers
         public static Color SecondaryColor { get; set; }
         public static List<string> colorList = new List<string>()
         {
-            "#c92a2a", //red
-            "#a61e4d", //purple
-            "#1864ab", //blue
-            "#087f5b", //dark green
-            "#2b8a3e", // light green
+            "#c92a2a", 
+            "#a61e4d",
+            "#1864ab",
+            "#087f5b",
+            "#2b8a3e",
             "#c0eb75",
             "#d9480f",
             "#5c940d",

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SecureLineSalesApp.Components.SpalshScreen
 {
-    public partial class SplashScreen : Form
+    public partial class Dashboard : Form
     {
-        public SplashScreen()
+        public Dashboard()
         {
             InitializeComponent();
         }

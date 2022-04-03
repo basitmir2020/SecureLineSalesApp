@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SecureLineSalesApp.Components.Dashboard.Products
+namespace SecureLineSalesApp.Dtos.SubSubCategory
 {
-    internal class ProductModel
+    internal class SubSubCategoryDTO  : CreateSubSubCategoryDTO
     {
     }
 }

@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SecureLineSalesApp.Dashboard
+namespace SecureLineSalesApp.Components
 {
-    public partial class Dashboard : Form
+    public partial class DashBoard : Form
     {
-        public Dashboard()
+        public DashBoard()
         {
             InitializeComponent();
         }

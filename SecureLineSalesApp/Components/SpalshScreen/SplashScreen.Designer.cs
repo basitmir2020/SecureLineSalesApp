@@ -1,6 +1,6 @@
 ﻿namespace SecureLineSalesApp.Components.SpalshScreen
 {
-    partial class SplashScreen
+    partial class Dashboard
     {
         /// <summary>
         /// Required designer variable.
