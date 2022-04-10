@@ -43,16 +43,23 @@ namespace SecureLineSalesApp.Components.Dashboard.CategoryForm
             model.CategoryName = txtCategoryName.Text.Trim();
             model.CreatedOn = DateTime.Now;
             model.UpdatedOn = DateTime.Now;
-            context.Categories.Add(model);
-            int result = context.SaveChanges();
-            if(result > 0)
+            try
             {
-                MessageBox.Show("Data Inserted Successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                bindValues();
-                ResetControls();
-            }
-            else {
-                MessageBox.Show("Data Not Inserted!", "Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                context.Categories.Add(model);
+                int result = context.SaveChanges();
+                if (result > 0)
+                {
+                    MessageBox.Show("Data Inserted Successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    bindValues();
+                    ResetControls();
+                }
+                else
+                {
+                    MessageBox.Show("Data Not Inserted!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

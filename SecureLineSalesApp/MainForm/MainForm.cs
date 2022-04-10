@@ -1,5 +1,4 @@
-﻿using SecureLineSalesApp.Components.Dashboard.SubSubCategory;
-using SecureLineSalesApp.Helpers;
+﻿using SecureLineSalesApp.Helpers;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
@@ -11,6 +10,7 @@ using SecureLineSalesApp.Components.Dashboard.Stock;
 using SecureLineSalesApp.Components;
 using SecureLineSalesApp.Components.Dashboard.CategoryForm;
 using SecureLineSalesApp.Components.Dashboard.SubCategoryForm;
+using SecureLineSalesApp.Components.Dashboard.SubSubCategoryForm;
 
 namespace SecureLineSalesApp.MainForm
 {
@@ -112,7 +112,7 @@ namespace SecureLineSalesApp.MainForm
 
         private void btnSubSubCategory_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new SubSubCategory(), sender);
+            OpenChildForm(new SubSubCategoryForm(), sender);
         }
 
         private void btnProduct_Click(object sender, EventArgs e)

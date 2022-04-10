@@ -58,17 +58,23 @@ namespace SecureLineSalesApp.Components.Dashboard.SubCategoryForm
             model.IsDeleted = 0;
             if(model.SubCategoryName != null)
             {
-                context.SubCategories.Add(model);
-                int result = context.SaveChanges();
-                if(result > 0)
+                try
                 {
-                    MessageBox.Show("Data Inserted Successfull!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    ResetControls();
-                    bindValues();
-                }
-                else
+                    context.SubCategories.Add(model);
+                    int result = context.SaveChanges();
+                    if (result > 0)
+                    {
+                        MessageBox.Show("Data Inserted Successfull!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        ResetControls();
+                        bindValues();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Data Not Inserted!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }catch (Exception ex)
                 {
-                    MessageBox.Show("Data Not Inserted!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
